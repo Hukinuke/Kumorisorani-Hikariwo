@@ -1,0 +1,245 @@
+[
+  {
+    "id": "kino",
+
+    "name": "木乃",
+
+    "summary": "主人公",
+
+    "birthday": "1/1",
+
+    "past": {
+      "age": "13",
+      "height": "150cm",
+
+      "color": "#8ECDF6",
+
+      "group": "一般生徒",
+      "role": "なし",
+      "position": "中学生",
+
+      "firstPerson": "私",
+      "secondPerson": "あなた",
+
+      "ability": "能力名",
+      "abilityDescription": "能力説明を記入",
+
+      "personality": "過去の性格",
+
+      "parameters": [
+        {
+          "name": "愛されバカ",
+          "value": 5
+        },
+        {
+          "name": "運",
+          "value": 4
+        }
+      ],
+
+      "episodes": [
+        "過去の出来事"
+      ],
+
+      "relations": []
+    },
+
+    "present": {
+      "age": "16",
+      "height": "160cm",
+
+      "color": "#4EA5FF",
+
+      "image":"images/kino.png",
+
+      "organization":"高校",
+      "grade":"1年",
+      "group":"お助け部",
+      "role":"部長",
+
+      "firstPerson": "私",
+      "secondPerson": "あなた",
+
+      "ability": "能力名",
+      "abilityDescription": "能力説明を記入",
+
+      "personality": "現在の性格",
+
+      "parameters": [
+        {
+          "name": "愛されバカ",
+          "value": 5
+        },
+        {
+          "name": "運",
+          "value": 4
+        },
+        {
+          "name": "コミュ力",
+          "value": 5
+        }
+      ],
+
+      "episodes": [
+        "現在の出来事"
+      ],
+
+      "relations": [
+        {
+          "target": "hayashi",
+          "emotion": "親友"
+        }
+      ]
+    },
+
+    "future": {
+      "age": "26",
+      "height": "168cm",
+
+      "color": "#1E5AA8",
+
+      "group": "政府",
+      "role": "特別任務隊長",
+      "position": "政府所属",
+
+      "firstPerson": "私",
+      "secondPerson": "君",
+
+      "ability": "進化後能力",
+      "abilityDescription": "未来の能力説明",
+
+      "personality": "未来の性格",
+
+      "parameters": [
+        {
+          "name": "責任感",
+          "value": 5
+        },
+        {
+          "name": "統率力",
+          "value": 4
+        },
+        {
+          "name": "愛されバカ",
+          "value": 2
+        }
+      ],
+
+      "episodes": [
+        "未来の出来事"
+      ],
+
+      "relations": []
+    }
+  },
+
+  {
+    "id": "hayashi",
+
+    "name": "林",
+
+    "summary": "サンプル",
+
+    "birthday": "1/1",
+
+    "past": {
+      "age": "13",
+      "height": "150cm",
+
+      "color": "#7ED957",
+
+      "group": "一般生徒",
+      "role": "なし",
+      "position": "中学生",
+
+      "firstPerson": "俺",
+      "secondPerson": "お前",
+
+      "ability": "未設定",
+      "abilityDescription": "未設定",
+
+      "personality": "未設定",
+
+      "parameters": [
+        {
+          "name": "サンプル",
+          "value": 3
+        }
+      ],
+
+      "episodes": [],
+
+      "relations": []
+    },
+
+    "present": {
+      "age": "16",
+      "height": "170cm",
+
+      "color": "#7ED957",
+
+      "group": "お助け部",
+      "role": "副部長",
+      "position": "高校2年",
+
+      "firstPerson": "俺",
+      "secondPerson": "お前",
+
+      "ability": "未設定",
+      "abilityDescription": "未設定",
+
+      "personality": "未設定",
+
+      "parameters": [
+        {
+          "name": "知能",
+          "value": 4
+        }
+      ],
+
+      "episodes": [],
+
+      "relations": [
+        {
+          "target": "kino",
+          "emotion": "親友"
+        }
+      ]
+    },
+
+    "future": {
+      "age": "26",
+      "height": "170cm",
+
+      "color": "#538A39",
+
+      "group": "政府",
+      "role": "研究員",
+      "position": "政府所属",
+
+      "firstPerson": "俺",
+      "secondPerson": "君",
+
+      "ability": "未設定",
+      "abilityDescription": "未設定",
+
+      "personality": "未設定",
+
+      "parameters": [
+        {
+          "name": "知能",
+          "value": 5
+        }
+      ],
+
+      "episodes": [],
+    
+      "relations": [
+        {
+          "target": "kino",
+          "emotion": "協力者"
+        }
+      ]
+    }
+  }
+]

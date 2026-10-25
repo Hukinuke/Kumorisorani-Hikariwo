@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創作資料庫</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>創作資料庫</h1>
+
+        <div class="era-selector">
+
+            <button onclick="setEra('past')">
+                過去編
+            </button>
+
+            <button onclick="setEra('present')">
+                現在編
+            </button>
+
+            <button onclick="setEra('future')">
+                未来編
+            </button>
+
+        </div>
+
+        <p id="eraLabel">
+            現在編を表示中
+        </p>
+
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+
+            <button onclick="showPage('home')">
+                ホーム
+            </button>
+
+            <button onclick="showPage('characters')">
+                キャラクター
+            </button>
+
+            <button onclick="showPage('world')">
+                世界観
+            </button>
+
+            <button onclick="showPage('terms')">
+                組織・用語集
+            </button>
+
+            <button onclick="showPage('timeline')">
+                年表
+            </button>
+
+        </aside>
+
+        <main class="content">
+
+            <!-- ホーム -->
+
+            <section id="home" class="page active">
+
+                <div class="card">
+
+                    <h2>ホーム</h2>
+
+                    <p>
+                        創作資料サイト
+                    </p>
+
+                    <p>
+                        上部のボタンで
+                        過去編・現在編・未来編を
+                        切り替えられます。
+                    </p>
+
+                </div>
+
+            </section>
+
+            <!-- 世界観 -->
+
+            <section id="world" class="page">
+
+                <div class="card">
+
+                    <h2>世界観</h2>
+
+                    <div id="worldContent">
+                    </div>
+
+                </div>
+
+            </section>
+        
+            <section id="terms" class="page">
+
+                <div class="card">
+
+                    <h2>組織・用語集</h2>
+
+                     <div id="termsContent">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- 年表 -->
+
+            <section id="timeline" class="page">
+
+                <div class="card">
+
+                    <h2>年表</h2>
+
+                    <div id="timelineContent">
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- キャラクター -->
+
+            <section id="characters" class="page">
+
+                <!-- グループ一覧 -->
+
+                <div id="groupView">
+
+                    <h2>グループ一覧</h2>
+
+                    <div id="groupList" class="grid">
+                    </div>
+
+                </div>
+
+                <!-- キャラ一覧 -->
+
+                <div id="characterListView" hidden>
+
+                    <button
+                        class="back-button"
+                        onclick="backToGroups()">
+
+                        グループ一覧へ戻る
+
+                    </button>
+
+                    <h2 id="currentGroup">
+                    </h2>
+
+                    <div
+                        id="characterList"
+                        class="grid">
+                    </div>
+
+                </div>
+
+                <!-- キャラ詳細 -->
+
+                <div id="characterDetailView" hidden>
+
+                    <button
+                        class="back-button"
+                        onclick="backToCharacterList()">
+
+                        キャラ一覧へ戻る
+
+                    </button>
+
+                    <div id="characterDetail">
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- 人物変遷モーダル -->
+
+    <div id="historyModal"
+         class="modal hidden">
+
+        <div class="modal-content">
+
+            <h2>
+                人物変遷
+            </h2>
+
+            <p>
+                ⚠ ネタバレを含みます
+            </p>
+
+            <div id="historyContent">
+            </div>
+
+            <button onclick="closeHistory()">
+                閉じる
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
