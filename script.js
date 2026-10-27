@@ -1,4 +1,5 @@
 let organizations = {};
+
 let characters = [];
 
 let currentEra = "present";
@@ -8,6 +9,8 @@ let selectedOrganization = null;
 let selectedGrade = null;
 
 let selectedGroup = null;
+
+let currentCharacter = null;
 
 window.onload = loadData;
 
@@ -79,7 +82,17 @@ function setEra(era){
 
     renderTimeline();
 
-    backToGroups();
+    if(currentCharacter){
+
+        openCharacter(
+            currentCharacter
+        );
+
+    }else{
+
+        backToGroups();
+
+    }
 }
 
 /* ------------------
@@ -172,6 +185,12 @@ function openTerm(name){
     document
         .getElementById("termsContent")
         .innerHTML = `
+
+<div class="breadcrumb">
+
+${name}
+
+</div>
 
 <h2>${name}</h2>
 
@@ -272,6 +291,10 @@ function openOrganization(org){
     ];
 
     document
+        .getElementById("characterDetailView")
+        .hidden = true;
+
+    document
         .getElementById("groupView")
         .hidden = true;
 
@@ -312,6 +335,16 @@ function openOrganization(org){
 
 function openGrade(grade){
 
+    console.log(
+        "selectedOrganization:",
+        selectedOrganization
+    );
+
+    console.log(
+        "grade:",
+        grade
+    );
+
     selectedGrade = grade;
 
     const groups = [
@@ -345,12 +378,53 @@ function openGrade(grade){
 
     ];
 
+    console.log(
+        "groups",
+        groups
+    );
+
     document
-        .getElementById(
-            "currentGroup"
-        )
-        .textContent =
-        `${selectedOrganization} > ${grade}`;
+        .getElementById("characterDetailView")
+        .hidden = true;
+
+    document
+    .getElementById(
+        "characterListView"
+    )
+    .hidden = false;
+
+    console.log(
+        "characterListView",
+        document.getElementById(
+            "characterListView"
+        ).hidden
+    );
+
+    document
+    .getElementById(
+        "currentGroup"
+    )
+    .innerHTML = `
+
+<div class="breadcrumb">
+
+<span
+onclick="
+openOrganization(
+'${selectedOrganization}'
+)">
+${selectedOrganization}
+</span>
+
+＞
+
+${grade}
+
+</div>
+
+<h2>${grade}</h2>
+
+`;
 
     const container =
         document
@@ -403,8 +477,40 @@ function openGroup(group){
         .hidden = false;
 
     document
-        .getElementById("currentGroup")
-        .textContent = group;
+    .getElementById(
+        "currentGroup"
+    )
+    .innerHTML = `
+
+<div class="breadcrumb">
+
+<span
+onclick="
+openOrganization(
+'${selectedOrganization}'
+)">
+${selectedOrganization}
+</span>
+
+＞
+
+<span
+onclick="
+openGrade(
+'${selectedGrade}'
+)">
+${selectedGrade}
+</span>
+
+＞
+
+${group}
+
+</div>
+
+<h2>${group}</h2>
+
+`;
 
     const container =
         document.getElementById(
@@ -478,6 +584,8 @@ function openGroup(group){
 ------------------- */
 
 function openCharacter(id){
+
+    currentCharacter = id;
 
     const char =
         characters.find(

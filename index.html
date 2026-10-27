@@ -61,6 +61,10 @@
                 年表
             </button>
 
+            <button onclick="showPage('updates')">
+                更新履歴
+            </button>
+
         </aside>
 
         <main class="content">
@@ -130,6 +134,59 @@
 
             </section>
 
+            <!-- 更新履歴 -->
+
+            <section id="updates" class="page">
+
+                <h2>
+                    更新履歴
+                </h2>
+
+                <div class="update-grid">
+
+                    <div class="card update-entry">
+
+                        <h3>
+                            2026/10/27
+                        </h3>
+
+                        <ul>
+
+                            <li>パンくずナビゲーション実装</li>
+
+                            <li>
+                                高校 → 学年 → グループ → キャラクター
+                                の4階層構造実装
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div class="card update-entry">
+
+                        <h3>
+                            今後実装予定
+                        </h3>
+
+                        <ul>
+
+                            <li>キャラクター画像表示</li>
+
+                            <li>検索機能</li>
+
+                            <li>タグ機能</li>
+
+                            <li>組織ページ改良</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
             <!-- キャラクター -->
 
             <section id="characters" class="page">
@@ -149,13 +206,6 @@
 
                 <div id="characterListView" hidden>
 
-                    <button
-                        class="back-button"
-                        onclick="backToGroups()">
-
-                        グループ一覧へ戻る
-
-                    </button>
 
                     <h2 id="currentGroup">
                     </h2>
@@ -170,14 +220,6 @@
                 <!-- キャラ詳細 -->
 
                 <div id="characterDetailView" hidden>
-
-                    <button
-                        class="back-button"
-                        onclick="backToCharacterList()">
-
-                        キャラ一覧へ戻る
-
-                    </button>
 
                     <div id="characterDetail">
                     </div>

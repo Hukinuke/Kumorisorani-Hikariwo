@@ -168,25 +168,6 @@ header h1{
     margin-bottom:15px;
 }
 
-/* ---------- back button ---------- */
-
-.back-button{
-
-    padding:10px 15px;
-
-    border:none;
-
-    border-radius:8px;
-
-    background:#2563eb;
-
-    color:white;
-
-    cursor:pointer;
-
-    margin-bottom:20px;
-}
-
 /* ---------- relation ---------- */
 
 .relation-button{
@@ -393,16 +374,76 @@ header h1{
 
 .breadcrumb{
 
-    margin-bottom:20px;
+    margin-bottom:16px;
 
     color:#94a3b8;
 
-    font-size:0.9rem;
+    font-size:1rem;
 }
 
 .breadcrumb span{
 
     cursor:pointer;
 
-    color:#7dd3fc;
+    color:#93c5fd;
+
+    font-weight:bold;
+}
+
+.breadcrumb span:hover{
+
+    text-decoration:underline;
+}
+
+.update-entry{
+
+    margin-bottom:32px;
+
+    padding-bottom:24px;
+
+    border-bottom:1px solid
+    rgba(255,255,255,0.1);
+}
+
+.update-entry h3{
+
+    color:#93c5fd;
+
+    margin-bottom:12px;
+}
+
+.update-entry ul{
+
+    padding-left:24px;
+}
+
+.update-entry li{
+
+    margin-bottom:8px;
+
+    line-height:1.6;
+}
+
+/* ---------- updates ---------- */
+
+.update-grid{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.update-entry{
+
+    transition:0.2s;
+
+}
+
+.update-entry:hover{
+
+    transform:translateY(-2px);
+
 }
