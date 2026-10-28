@@ -14,6 +14,54 @@ let currentCharacter = null;
 
 window.onload = loadData;
 
+/* ------------------
+   共通セクション生成
+------------------- */
+
+function createListSection(
+    title,
+    items
+){
+
+    if(
+        !items ||
+        items.length === 0
+    ){
+        return "";
+    }
+
+    return `
+
+    <div class="card">
+
+        <h3 class="section-title">
+
+            ${title}
+
+        </h3>
+
+        <ul class="character-list">
+
+            ${
+                items
+                .map(
+                    item =>
+                    `<li>${item}</li>`
+                )
+                .join("")
+            }
+
+        </ul>
+
+    </div>
+
+    `;
+}
+
+/* ------------------
+   データ読み込み
+------------------- */
+
 async function loadData(){
 
     const response =
@@ -24,7 +72,7 @@ async function loadData(){
 
     organizations = {
 
-        "高校":{
+        "未来高校":{
             description:
             "物語の主な舞台となる学校。"
         },
@@ -303,8 +351,27 @@ function openOrganization(org){
         .hidden = false;
 
     document
-        .getElementById("currentGroup")
-        .textContent = org;
+    .getElementById("currentGroup")
+    .innerHTML = `
+
+    <div class="breadcrumb">
+
+    <span onclick="backToGroups()">
+
+    グループ一覧
+
+    </span>
+
+    ＞
+
+    ${org}
+
+    </div>
+
+    <h2>${org}</h2>
+
+    `;
+
 
     const container =
         document
@@ -413,6 +480,21 @@ onclick="
 openOrganization(
 '${selectedOrganization}'
 )">
+<div class="breadcrumb">
+
+<span onclick="backToGroups()">
+
+グループ一覧
+
+</span>
+
+＞
+
+<span
+onclick="
+openOrganization(
+'${selectedOrganization}'
+)">
 ${selectedOrganization}
 </span>
 
@@ -483,6 +565,13 @@ function openGroup(group){
     .innerHTML = `
 
 <div class="breadcrumb">
+
+<span
+onclick="backToGroups()">
+グループ一覧
+</span>
+
+＞
 
 <span
 onclick="
@@ -610,6 +699,13 @@ function openCharacter(id){
 <div class="breadcrumb">
 
 <span
+onclick="backToGroups()">
+グループ一覧
+</span>
+
+＞
+
+<span
 onclick="
 openOrganization(
 '${info.organization}'
@@ -674,6 +770,10 @@ class="character-image">
 プロフィール
 </h3>
 
+<p>
+${char.summary}
+</p>
+
 <p>年齢：${info.age}</p>
 
 <p>身長：${info.height}</p>
@@ -736,6 +836,11 @@ ${info.group}
 
 </div>
 
+${createListSection(
+    "外見",
+    info.appearance
+)}
+
 <div class="card">
 
 <h3 class="section-title">
@@ -748,25 +853,27 @@ ${info.group}
 ${info.ability}
 </p>
 
-<p>
-${info.abilityDescription}
-</p>
-
 </div>
 
-<div class="card">
+${createListSection(
+    "能力説明",
+    info.abilityDescriptions
+)}
 
-<h3 class="section-title">
+${createListSection(
+    "好きなもの",
+    info.likes
+)}
 
-性格
+${createListSection(
+    "苦手なもの",
+    info.dislikes
+)}
 
-</h3>
-
-<p>
-${info.personality}
-</p>
-
-</div>
+${createListSection(
+    "性格",
+    info.personalities
+)}
 
 <div class="card">
 
@@ -790,12 +897,31 @@ style="color:${info.color}">
 ${"★".repeat(parameter.value)}
 </span>
 
-
 </div>
 
 `).join("")}
 
 </div>
+
+${createListSection(
+    "特技",
+    info.skills
+)}
+
+${createListSection(
+    "小ネタ",
+    info.trivia
+)}
+
+${createListSection(
+    "名言",
+    info.quotes
+)}
+
+${createListSection(
+    "家族構成",
+    info.familyStructure
+)}
 
 <div class="card">
 
@@ -805,7 +931,8 @@ ${"★".repeat(parameter.value)}
 
 </h3>
 
-${info.relations.map(relation=>{
+${(info.relations || [])
+.map(relation=>{
 
 const target =
 characters.find(
@@ -834,22 +961,10 @@ ${target.name}
 
 </div>
 
-<div class="card">
-
-<h3 class="section-title">
-
-エピソード
-
-</h3>
-
-${info.episodes
-.map(
-episode =>
-`<p>・${episode}</p>`
-)
-.join("")}
-
-</div>
+${createListSection(
+    "エピソード",
+    info.episodes
+)}
 
 <div class="card">
 
@@ -869,7 +984,8 @@ episode =>
 
 </div>
 
-${info.relations.map(relation=>{
+${(info.relations || [])
+.map(relation=>{
 
 const target =
 characters.find(
@@ -998,7 +1114,7 @@ ${data.ability}
 
 <p>
 性格：
-${data.personality}
+${data.personalities}
 </p>
 
 </div>

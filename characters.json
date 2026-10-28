@@ -1,245 +1,373 @@
 [
   {
-    "id": "kino",
+    "id": "Kino_Ichigo",
 
-    "name": "木乃",
+    "name": "木乃　いちご",
 
-    "summary": "主人公",
+    "summary": "",
 
-    "birthday": "1/1",
+    "birthday": "1/15",
 
     "past": {
-      "age": "13",
-      "height": "150cm",
+        "age": "",
+        "height": "cm",
 
-      "color": "#8ECDF6",
+        "color": "#FF0000",
 
-      "group": "一般生徒",
-      "role": "なし",
-      "position": "中学生",
+        "organization":"",
+        "grade":"",
+        "group":"",
+        "role":"",
 
-      "firstPerson": "私",
-      "secondPerson": "あなた",
+        "appearance":[],
 
-      "ability": "能力名",
-      "abilityDescription": "能力説明を記入",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "personality": "過去の性格",
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "parameters": [
-        {
-          "name": "愛されバカ",
-          "value": 5
-        },
-        {
-          "name": "運",
-          "value": 4
-        }
-      ],
+        "likes":[],
+        "dislikes":[],
 
-      "episodes": [
-        "過去の出来事"
-      ],
+        "personalities": [],
 
-      "relations": []
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[],
+
+        "episodes": [],
+
+        "trivia":[],
+
+        "quotes":[],
+
+        "familyStructure": [],
+
+        "relations": [
+            {
+            "target": "",
+            "emotion": ""
+            }
+        ]
     },
 
     "present": {
-      "age": "16",
-      "height": "160cm",
+        "age": "16",
+        "height": "cm",
 
-      "color": "#4EA5FF",
+        "color": "#FF0000",
 
-      "image":"",
+        "image":"",
 
-      "organization":"高校",
-      "grade":"1年",
-      "group":"お助け部",
-      "role":"部長",
+        "organization":"未来高校",
+        "grade":"1年",
+        "group":"お助け部",
+        "role":"部長",
 
-      "firstPerson": "私",
-      "secondPerson": "あなた",
+        "appearance":[],
 
-      "ability": "能力名",
-      "abilityDescription": "能力説明を記入",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "personality": "現在の性格",
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "parameters": [
-        {
-          "name": "愛されバカ",
-          "value": 5
-        },
-        {
-          "name": "運",
-          "value": 4
-        },
-        {
-          "name": "コミュ力",
-          "value": 5
-        }
-      ],
+        "likes":[
+          "いちご"
+        ],
+        "dislikes":[
+          "いじめ"
+        ],
 
-      "episodes": [
-        "現在の出来事"
-      ],
+        "personalities": [],
 
-      "relations": [
-        {
-          "target": "hayashi",
-          "emotion": "親友"
-        }
-      ]
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[
+          "運動"
+        ],
+
+        "episodes": [
+          "彼女ができなくて悩んでいる"
+        ],
+
+        "trivia":[
+          "かっこいいと思われたいが、可愛がられている"
+        ],
+
+        "quotes":[
+          "助けられる奴は全員助ける！！"
+        ],
+
+        "familyStructure": [
+          "母と2人暮らし"
+        ],
+
+            "relations": [
+            {
+            "target": "Torisaki_Shito",
+            "emotion": "ダチ"
+            }
+        ]
     },
 
     "future": {
-      "age": "26",
-      "height": "168cm",
+        "age": "",
+        "height": "cm",
 
-      "color": "#1E5AA8",
+        "color": "#",
 
-      "group": "政府",
-      "role": "特別任務隊長",
-      "position": "政府所属",
+        "organization":"",
+        "grade":"",
+        "group":"",
+        "role":"",
 
-      "firstPerson": "私",
-      "secondPerson": "君",
+        "appearance":[],
 
-      "ability": "進化後能力",
-      "abilityDescription": "未来の能力説明",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "personality": "未来の性格",
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "parameters": [
-        {
-          "name": "責任感",
-          "value": 5
-        },
-        {
-          "name": "統率力",
-          "value": 4
-        },
-        {
-          "name": "愛されバカ",
-          "value": 2
-        }
-      ],
+        "likes":[],
+        "dislikes":[],
 
-      "episodes": [
-        "未来の出来事"
-      ],
+        "personalities": [],
 
-      "relations": []
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[],
+
+        "episodes": [],
+
+        "trivia":[],
+
+        "quotes":[],
+
+        "familyStructure": [],
+
+        "relations": []
     }
   },
 
   {
-    "id": "hayashi",
+    "id": "Torisaki_Shito",
 
-    "name": "林",
+    "name": "鳥崎　しと",
 
-    "summary": "サンプル",
+    "summary": "",
 
-    "birthday": "1/1",
+    "birthday": "/",
 
     "past": {
-      "age": "13",
-      "height": "150cm",
+        "age": "",
+        "height": "cm",
 
-      "color": "#7ED957",
+        "color": "#",
 
-      "group": "一般生徒",
-      "role": "なし",
-      "position": "中学生",
+        "organization":"",
+        "grade":"",
+        "group":"",
+        "role":"",
 
-      "firstPerson": "俺",
-      "secondPerson": "お前",
+        "appearance":[],
 
-      "ability": "未設定",
-      "abilityDescription": "未設定",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "personality": "未設定",
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "parameters": [
-        {
-          "name": "サンプル",
-          "value": 3
-        }
-      ],
+        "likes":[],
+        "dislikes":[],
 
-      "episodes": [],
+        "personalities": [],
 
-      "relations": []
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[],
+
+        "episodes": [],
+
+        "trivia":[],
+
+        "quotes":[],
+
+        "familyStructure": [],
+
+        "relations": [
+            {
+            "target": "",
+            "emotion": ""
+            }
+        ]
     },
 
     "present": {
-      "age": "16",
-      "height": "170cm",
+        "age": "",
+        "height": "cm",
 
-      "color": "#7ED957",
+        "color": "#",
 
-      "group": "お助け部",
-      "role": "副部長",
-      "position": "高校2年",
+        "image":"",
 
-      "firstPerson": "俺",
-      "secondPerson": "お前",
+        "organization":"未来高校",
+        "grade":"1年",
+        "group":"お助け部",
+        "role":"部員",
 
-      "ability": "未設定",
-      "abilityDescription": "未設定",
+        "appearance":[],
 
-      "personality": "未設定",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "parameters": [
-        {
-          "name": "知能",
-          "value": 4
-        }
-      ],
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "episodes": [],
+        "likes":[
+          "レモン"
+        ],
+        "dislikes":[],
 
-      "relations": [
-        {
-          "target": "kino",
-          "emotion": "親友"
-        }
-      ]
+        "personalities": [],
+
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[],
+
+        "episodes": [],
+
+        "trivia":[],
+
+        "quotes":[],
+
+        "familyStructure": [],
+
+            "relations": [
+            {
+            "target": "",
+            "emotion": ""
+            }
+        ]
     },
 
     "future": {
-      "age": "26",
-      "height": "170cm",
+        "age": "",
+        "height": "cm",
 
-      "color": "#538A39",
+        "color": "#",
 
-      "group": "政府",
-      "role": "研究員",
-      "position": "政府所属",
+        "organization":"",
+        "grade":"",
+        "group":"",
+        "role":"",
 
-      "firstPerson": "俺",
-      "secondPerson": "君",
+        "appearance":[],
 
-      "ability": "未設定",
-      "abilityDescription": "未設定",
+        "firstPerson": "",
+        "secondPerson": "",
 
-      "personality": "未設定",
+        "ability": "",
+        "abilityDescriptions": [],
 
-      "parameters": [
-        {
-          "name": "知能",
-          "value": 5
-        }
-      ],
+        "likes":[],
+        "dislikes":[],
 
-      "episodes": [],
-    
-      "relations": [
-        {
-          "target": "kino",
-          "emotion": "協力者"
-        }
-      ]
+        "personalities": [],
+
+        "parameters": [
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            },
+            {
+            "name": "",
+            "value": 1
+            }
+        ],
+
+        "skills":[],
+
+        "episodes": [],
+
+        "trivia":[],
+
+        "quotes":[],
+
+        "familyStructure": [],
+
+        "relations": []
     }
   }
 ]
